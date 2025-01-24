@@ -2,7 +2,8 @@
     "name": "Omnivox Dark Theme",
     "version": "0.0.4",
     "manifest_version": 2,
-    "description": "Omnivox Dark Theme by majeurbilly",
+    "description": "Omnivox Dark Theme by moukdot",
+    "homepage_url": "https://chrome.google.com/webstore/detail/omnivox-dark-theme/najnjmkkfdjmocfdadcpacdanpmibbbb",
     "icons": {
         "16": "icons/icon16.png",
         "48": "icons/icon48.png",
