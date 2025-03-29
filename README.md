@@ -36,9 +36,6 @@
       </ul>
     </li>
     <li><a href="#usage">Usage</a></li>
-    <li><a href="#monitoring-tools-overview">Monitoring Tools Overview</a></li>
-    <li><a href="#authors--contributors">Authors & Contributors</a></li>
-    <li><a href="#acknowledgments">Acknowledgments</a></li>
   </ol>
 
 
