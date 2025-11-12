@@ -119,10 +119,8 @@ export async function disableDarkMode(): Promise<void> {
 export async function initDarkModeState(): Promise<DarkModeState> {
   let state = await getDarkModeState();
   if (state === 'no') {
-    // Si le mode sombre est désactivé, on applique le mode clair
     disableDarkModeDomOnly();
   } else if (state !== 'yes') {
-    // Si l'état n'existe pas ou est invalide, on active le mode sombre par défaut
     await setDarkModeState('yes');
     state = 'yes';
   }
@@ -137,15 +135,12 @@ export async function initDarkModeState(): Promise<DarkModeState> {
 */
 async function handleToggleClick(state: DarkModeState, onChange: StateChangeCallback): Promise<DarkModeState> {
   if (state === 'yes') {
-    // Si le mode sombre est actif, on le désactive
     await disableDarkMode();
     state = 'no';
   } else {
-    // Si le mode sombre est inactif, on l'active
     await enableDarkMode();
     state = 'yes';
   }
-  // Appelle le callback pour notifier le changement d'état
   onChange.execute(state);
   return state;
 }
@@ -157,7 +152,6 @@ async function handleToggleClick(state: DarkModeState, onChange: StateChangeCall
  * @param onChange Callback appelé quand l'état change (pour mise à jour de l'UI si nécessaire)
  */
 export function attachToggle(initialState: DarkModeState, onChange: StateChangeCallback): void {
-  // Trouve le conteneur du logo Omnivox dans le header
   const logoWrapper = document.getElementById('wrapper-headerOmnivoxLogo');
   if (!logoWrapper)
     {
@@ -166,13 +160,10 @@ export function attachToggle(initialState: DarkModeState, onChange: StateChangeC
 
   let state = initialState;
 
-  // Crée l'élément <a> qui servira de bouton toggle
   const toggle = document.createElement('a');
   toggle.id = 'themeToggle';
   toggle.title = 'Toggle Light/Dark Mode';
-  // Styles pour centrer l'icône verticalement et horizontalement
   toggle.style.cssText = 'display: flex; height: 100%; justify-content: center; align-items: center; margin-left: 28px;';
-  // Ajoute l'icône SVG (accessible via chrome.runtime.getURL pour les ressources de l'extension)
   const iconUrl = chrome.runtime.getURL('/src/inject/icon.svg');
   toggle.innerHTML = '<img style="height: 60%" src="' + iconUrl + '" class="logo-lea" alt="Toggle Light/Dark Mode">';
 
@@ -180,10 +171,8 @@ export function attachToggle(initialState: DarkModeState, onChange: StateChangeC
     state = await handleToggleClick(state, onChange);
   }
 
-  // Ajoute l'événement de clic pour basculer entre les modes
   toggle.addEventListener('click', onToggleClick);
 
-  // Ajoute le bouton toggle au header
   logoWrapper.appendChild(toggle);
 }
 
@@ -199,12 +188,10 @@ function disableDarkModeDomOnly(): void {
  * @param reject La fonction à appeler pour rejeter la Promise en cas d'erreur
  */
 function onStorageGetComplete(result: Record<string, unknown>,resolve: ValueCallback,reject: ErrorCallback): void {
-  // Vérifie s'il y a eu une erreur lors de la récupération
   if (chrome.runtime.lastError) {
     reject.execute(chrome.runtime.lastError);
     return;
   }
-  // Retourne la valeur sauvegardée (peut être undefined si jamais sauvegardé)
   resolve.execute(result.dark_mode as DarkModeState | undefined);
 }
 
