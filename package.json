@@ -1,5 +1,12 @@
 {
+  "scripts": {
+    "build": "tsc && npm run copy-assets",
+    "copy-assets": "node -e \"const fs = require('fs'); fs.mkdirSync('dist/inject', { recursive: true }); fs.copyFileSync('src/inject/inject.css', 'dist/inject/inject.css'); fs.copyFileSync('src/inject/icon.svg', 'dist/inject/icon.svg');\"",
+    "dev": "tsc --watch",
+    "clean": "rm -rf dist"
+  },
   "devDependencies": {
+    "@types/chrome": "^0.0.268",
     "@types/node": "^24.10.1",
     "ts-node": "^10.9.2",
     "typescript": "^5.9.3"

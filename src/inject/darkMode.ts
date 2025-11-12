@@ -3,8 +3,7 @@ import {
   VoidCallback, 
   StateChangeCallback, 
   ValueCallback, 
-  ErrorCallback, 
-  StorageCallback 
+  ErrorCallback
 } from './callbacks';
 
 /**
@@ -192,7 +191,7 @@ function onStorageGetComplete(result: Record<string, unknown>,resolve: ValueCall
     reject.execute(chrome.runtime.lastError);
     return;
   }
-  resolve.execute(result.dark_mode as DarkModeState | undefined);
+  resolve.execute(result['dark_mode'] as DarkModeState | undefined);
 }
 
 /**

@@ -13,3 +13,4 @@ async function bootstrap(): Promise<void> {
 window.onload = () => {
   void bootstrap();
 };
+

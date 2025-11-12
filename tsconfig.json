@@ -5,14 +5,12 @@
     // dossier de sortie
     "outDir": "./dist",
 
-    // module utilisé pour la compilation
-    "module": "nodenext",
+    // module utilisé pour la compilation (ES2020 pour extension Chrome moderne)
+    "module": "ES2020",
     // version de JavaScript cible
-    "target": "esnext",
-    // détection automatique des modules
-    "moduleDetection": "force",
-    // syntaxe de module verbatim
-    "verbatimModuleSyntax": true,
+    "target": "ES2020",
+    // système de modules
+    "moduleResolution": "node",
     // modules isolés
     "isolatedModules": true,
     // extension arbitraire des modules
@@ -27,7 +25,7 @@
     },
 
     // types de modules
-    "types": [],
+    "types": ["chrome"],
     // carte source
     "sourceMap": true,
     // déclaration de types
@@ -55,14 +53,10 @@
     "noPropertyAccessFromIndexSignature": true,
     // importations de side effect non vérifiées
     "noUncheckedSideEffectImports": true,
-    // vérification des effets secondaires non vérifiés
-    "noUncheckedSideEffect": true,
-    // vérification des importations de side effect non vérifiées
-    "noUncheckedSideEffectImports": true,
-    // vérification des importations de side effect non vérifiées
+    // vérification des bibliothèques
     "skipLibCheck": true,
-    // jsx
-    "jsx": "react-jsx"
+    // lib pour les APIs du navigateur
+    "lib": ["ES2020", "DOM"]
   },
   // fichiers à inclure
   "include": ["src/**/*"],

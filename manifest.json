@@ -12,15 +12,15 @@
     "content_scripts": [
       {
         "matches": ["https://*.omnivox.ca/*"],
-        "css": ["src/inject/inject.css"],
-        "js": ["src/inject/inject.js"],
+        "css": ["dist/inject/inject.css"],
+        "js": ["dist/inject/callbacks.js", "dist/inject/darkMode.js", "dist/inject/inject.js"],
         "run_at": "document_start",
         "exclude_matches": ["https://*.omnivox.ca/cvir/ddle/VisualiseDocument.aspx*"]
       }
     ],
     "web_accessible_resources": [
       {
-        "resources": ["src/inject/icon.svg"],
+        "resources": ["dist/inject/icon.svg"],
         "matches": ["https://*.omnivox.ca/*"]
       }
     ],
