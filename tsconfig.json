@@ -1,0 +1,71 @@
+{
+  "compilerOptions": {
+    // dossier source
+    "rootDir": "./src",
+    // dossier de sortie
+    "outDir": "./dist",
+
+    // module utilisé pour la compilation
+    "module": "nodenext",
+    // version de JavaScript cible
+    "target": "esnext",
+    // détection automatique des modules
+    "moduleDetection": "force",
+    // syntaxe de module verbatim
+    "verbatimModuleSyntax": true,
+    // modules isolés
+    "isolatedModules": true,
+    // extension arbitraire des modules
+    "allowArbitraryExtensions": false,
+
+    // base URL pour les chemins relatifs
+    "baseUrl": ".",
+    // chemins de modules relatifs
+    "paths": {
+      "@components/*": ["src/components/*"],
+      "@utils/*": ["src/utils/*"]
+    },
+
+    // types de modules
+    "types": [],
+    // carte source
+    "sourceMap": true,
+    // déclaration de types
+    "declaration": true,
+    // carte source de déclaration
+    "declarationMap": true,
+
+    // strict mode
+    "strict": true,
+    // accès indexé non vérifié
+    "noUncheckedIndexedAccess": true,
+    // types exacts des propriétés optionnelles
+    "exactOptionalPropertyTypes": true,
+    // retours implicites non autorisés
+    "noImplicitReturns": true,
+    // override implicite non autorisé
+    "noImplicitOverride": true,
+    // variables locales non utilisées non autorisées
+    "noUnusedLocals": true,
+    // paramètres non utilisés non autorisés
+    "noUnusedParameters": true,
+    // cas de chute dans le switch non autorisés
+    "noFallthroughCasesInSwitch": true,
+    // accès aux propriétés non autorisés
+    "noPropertyAccessFromIndexSignature": true,
+    // importations de side effect non vérifiées
+    "noUncheckedSideEffectImports": true,
+    // vérification des effets secondaires non vérifiés
+    "noUncheckedSideEffect": true,
+    // vérification des importations de side effect non vérifiées
+    "noUncheckedSideEffectImports": true,
+    // vérification des importations de side effect non vérifiées
+    "skipLibCheck": true,
+    // jsx
+    "jsx": "react-jsx"
+  },
+  // fichiers à inclure
+  "include": ["src/**/*"],
+  // fichiers à exclure
+  "exclude": ["node_modules", "dist"]
+}
