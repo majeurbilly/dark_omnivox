@@ -16,13 +16,6 @@
     // extension arbitraire des modules
     "allowArbitraryExtensions": false,
 
-    // base URL pour les chemins relatifs
-    "baseUrl": ".",
-    // chemins de modules relatifs
-    "paths": {
-      "@components/*": ["src/components/*"],
-      "@utils/*": ["src/utils/*"]
-    },
 
     // types de modules
     "types": ["chrome"],

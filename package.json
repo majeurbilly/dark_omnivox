@@ -8,7 +8,6 @@
   "devDependencies": {
     "@types/chrome": "^0.0.268",
     "@types/node": "^24.10.1",
-    "ts-node": "^10.9.2",
     "typescript": "^5.9.3"
   }
 }
