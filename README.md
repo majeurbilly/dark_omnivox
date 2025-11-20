@@ -1,5 +1,3 @@
-![wewdewfewd](https://github.com/user-attachments/assets/98cfb4a8-8e96-4561-bd94-09aa57b3ac27)
-
 ## **Utilisation d'Omnivox Dark Theme**
 
 Une fois l'extension installée, elle s'activera automatiquement sur les pages Omnivox.
