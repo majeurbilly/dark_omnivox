@@ -1,0 +1,50 @@
+# Node modules
+node_modules/
+
+# Build output
+dist/
+build/
+out/
+
+# TypeScript
+*.tsbuildinfo
+
+# Logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Runtime data
+pids/
+*.pid
+*.seed
+*.pid.lock
+
+# OS-specific
+.DS_Store
+Thumbs.db
+
+# IDEs and editors
+.vscode/
+.idea/
+*.sublime-workspace
+*.sublime-project
+
+# Environment variables
+.env
+.env.local
+.env.*.local
+
+# Coverage and test output
+coverage/
+*.lcov
+
+# Optional: compiled JS from TS if not in build folder
+*.js
+*.js.map
+
+# Optional: ignore lockfiles if you don't use them
+# package-lock.json
+# yarn.lock
+# pnpm-lock.yaml
