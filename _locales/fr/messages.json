@@ -1,0 +1,14 @@
+{
+  "extensionName": {
+    "message": "Omnivox Dark Theme",
+    "description": "Le nom officiel de l'extension affiché dans le navigateur."
+  },
+  "extensionDescription": {
+    "message": "Ajoute un mode sombre moderne et reposant pour les yeux sur le portail Omnivox.",
+    "description": "La description courte qui apparaîtra dans le Chrome Web Store."
+  },
+  "toggleButtonTitle": {
+    "message": "Activer/Désactiver le mode sombre",
+    "description": "L'infobulle (tooltip) qui s'affiche quand on survole l'icône sur la page."
+  }
+}

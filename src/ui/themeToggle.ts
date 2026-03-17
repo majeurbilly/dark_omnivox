@@ -2,7 +2,6 @@ import { DarkModeController } from '../core/darkModeController';
 import { DarkModeState } from '../shared/darkMode';
 
 const TOGGLE_ID = 'themeToggle';
-const TOGGLE_TITLE = 'Toggle Light/Dark Mode';
 const ICON_CLASS = 'logo-lea';
 const ICON_PATH = 'icon.svg';
 
@@ -18,7 +17,7 @@ export class ThemeToggle {
   ) {
     this.toggleElement = document.createElement('a');
     this.toggleElement.id = TOGGLE_ID;
-    this.toggleElement.title = TOGGLE_TITLE;
+    this.toggleElement.title = chrome.i18n.getMessage('toggleButtonTitle');
     this.toggleElement.setAttribute('aria-pressed', 'false');
     this.toggleElement.style.cssText = [
       'display: flex',
@@ -31,7 +30,7 @@ export class ThemeToggle {
 
     this.iconElement = document.createElement('img');
     this.iconElement.src = chrome.runtime.getURL(ICON_PATH);
-    this.iconElement.alt = TOGGLE_TITLE;
+    this.iconElement.alt = chrome.i18n.getMessage('toggleButtonTitle');
     this.iconElement.className = ICON_CLASS;
     this.iconElement.style.cssText = 'height: 60%; transition: filter 0.3s ease';
 

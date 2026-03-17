@@ -1,15 +1,28 @@
 {
+  "name": "omnivox-dark-theme",
+  "version": "1.0.0",
+  "description": "Omnivox Dark Theme by majeurbilly",
+  "author": "majeurbilly",
+  "license": "MIT",
+  "homepage": "https://github.com/majeurbilly/dark_omnivox",
+  "packageManager": "pnpm@9.0.0",
+  "engines": {
+      "npm": "please-use-pnpm",
+      "yarn": "please-use-pnpm"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/majeurbilly/dark_omnivox.git"
+  },
   "scripts": {
-    "build": "npm run clean && npm run typecheck && npm run bundle && npm run copy-assets",
+    "build": "pnpm clean && pnpm typecheck && pnpm bundle && pnpm copy-assets",
     "bundle": "esbuild src/inject/inject.ts --bundle --format=iife --target=es2020 --outfile=dist/inject/content.js",
-<<<<<<< HEAD
     "copy-assets": "tsx build.ts",
-=======
-    "copy-assets": "node -e \"const fs = require('fs'); fs.mkdirSync('dist/inject', { recursive: true }); fs.copyFileSync('src/inject/inject.css', 'dist/inject/inject.css'); fs.copyFileSync('src/inject/icon.svg', 'dist/inject/icon.svg');\"",
->>>>>>> parent of a7ff512 (Merge pull request #1 from majeurbilly/gab)
     "dev": "tsc --watch",
     "typecheck": "tsc --noEmit",
-    "clean": "rimraf dist"
+    "clean": "rimraf dist",
+    "lint": "biome check",
+    "fix": "biome check --write"
   },
   "devDependencies": {
     "@biomejs/biome": "2.3.6",

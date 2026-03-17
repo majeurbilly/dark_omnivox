@@ -1,58 +1,31 @@
 {
   "compilerOptions": {
-    // dossier source
     "rootDir": "./src",
-    // dossier de sortie
     "outDir": "./dist",
 
-    // module utilisé pour la compilation (ES2020 pour extension Chrome moderne)
     "module": "ES2020",
-    // version de JavaScript cible
     "target": "ES2020",
-    // système de modules
     "moduleResolution": "node",
-    // modules isolés
     "isolatedModules": true,
-    // extension arbitraire des modules
     "allowArbitraryExtensions": false,
 
 
-    // types de modules
     "types": ["chrome"],
-    // carte source
-    "sourceMap": true,
-    // déclaration de types
-    "declaration": true,
-    // carte source de déclaration
-    "declarationMap": true,
 
-    // strict mode
+
     "strict": true,
-    // accès indexé non vérifié
     "noUncheckedIndexedAccess": true,
-    // types exacts des propriétés optionnelles
     "exactOptionalPropertyTypes": true,
-    // retours implicites non autorisés
     "noImplicitReturns": true,
-    // override implicite non autorisé
     "noImplicitOverride": true,
-    // variables locales non utilisées non autorisées
     "noUnusedLocals": true,
-    // paramètres non utilisés non autorisés
     "noUnusedParameters": true,
-    // cas de chute dans le switch non autorisés
     "noFallthroughCasesInSwitch": true,
-    // accès aux propriétés non autorisés
     "noPropertyAccessFromIndexSignature": true,
-    // importations de side effect non vérifiées
     "noUncheckedSideEffectImports": true,
-    // vérification des bibliothèques
     "skipLibCheck": true,
-    // lib pour les APIs du navigateur
     "lib": ["ES2020", "DOM"]
   },
-  // fichiers à inclure
   "include": ["src/**/*"],
-  // fichiers à exclure
   "exclude": ["node_modules", "dist"]
 }
