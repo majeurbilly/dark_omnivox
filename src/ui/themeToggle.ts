@@ -3,7 +3,7 @@ import { DarkModeState } from '../shared/darkMode';
 
 const TOGGLE_ID = 'themeToggle';
 const ICON_CLASS = 'logo-lea';
-const ICON_PATH = 'icon.svg';
+const ICON_PATH = 'inject/icon.svg';
 
 export class ThemeToggle {
   private readonly toggleElement: HTMLAnchorElement;
