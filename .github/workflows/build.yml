@@ -1,0 +1,45 @@
+name: Build Chrome Extension
+
+on:
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout du code
+      uses: actions/checkout@v4
+
+    - name: Installation de pnpm
+      uses: pnpm/action-setup@v3
+      with:
+        version: 8
+
+    - name: Configuration de Node.js
+      uses: actions/setup-node@v4
+      with:
+        node-version: '20'
+        cache: 'pnpm'
+
+    - name: Installation des dépendances
+      run: pnpm install
+
+    - name: Construction de extension (Build)
+      run: pnpm build
+
+    - name: Création du fichier ZIP
+      run: |
+        cd dist
+        zip -r ../omnivox-dark-theme.zip ./*
+        cd ..
+
+    - name: Sauvegarde de artefact
+      uses: actions/upload-artifact@v4
+      with:
+        name: omnivox-dark-theme-zip
+        path: omnivox-dark-theme.zip
+        retention-days: 7
