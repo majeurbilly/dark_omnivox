@@ -48,7 +48,7 @@
 
 ## Installation Process
 
-L’extension est disponible sur le Chrome Web Store. 
+L’extension est disponible sur le [Chrome Web Store.](https://chromewebstore.google.com/detail/dark-omnivox/iibodmibaldeakhfefnmjcajinggeadb?hl=fr&utm_source=ext_sidebar)
 
 ### Prerequisites
 
